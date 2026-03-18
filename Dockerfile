@@ -15,7 +15,7 @@ ENV POSTGRES_BACKUP_RESTORE_TARGET_PASSWORD=""
 ENV POSTGRES_BACKUP_RESTORE_TARGET_DB_NAME=""
 
 RUN apt-get update --quiet && \
-    apt-get install -y --no-install-recommends dos2unix gzip curl unzip && \
+    apt-get install -y --no-install-recommends ca-certificates dos2unix gzip curl unzip && \
     rm -rf /var/lib/apt/lists/*
 
 COPY entrypoint.sh /usr/local/bin/entrypoint.sh
