@@ -22,3 +22,10 @@ then reference the .env file when running the container
 ```bash
 docker run --rm --env-file .env --network desired-network baunach/postgres-backup-restore:{VERSION}
 ```
+
+## License
+The Dockerfile and scripts in this repository are licensed under [MIT-0](LICENSE).
+
+The image contains third-party software that is subject to its own licenses, including:
+- PostgreSQL from the official `postgres` base image: PostgreSQL License
+- Debian packages of the base image and those installed by the Dockerfile (`ca-certificates`, `dos2unix`, `gzip`, `curl`, `unzip`): their respective licenses
